@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
 import axiosGetTrendingDay from 'api/axiosGetTrendingDay';
 import { FilmsTrendingList } from 'components/FilmsTrendingList/FilmsTrendingList';
 
@@ -28,3 +29,7 @@ const Home = () => {
 };
 
 export default Home;
+
+Home.propTypes = {
+  trendingDay: PropTypes.array,
+};

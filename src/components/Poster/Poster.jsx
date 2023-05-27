@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 const defaultImg =
   'https://ireland.apollo.olxcdn.com/v1/files/0iq0gb9ppip8-UA/image;s=1000x700';
 
@@ -12,3 +14,7 @@ export const Poster = ({ poster_path }) => (
     alt="poster"
   />
 );
+
+Poster.propTypes = {
+  poster_path: PropTypes.string,
+};

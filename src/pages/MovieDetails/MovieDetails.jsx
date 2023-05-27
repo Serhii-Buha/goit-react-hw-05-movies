@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import axiosGetMovieDetails from 'api/axiosGetMovieDetails';
 import { AdditionalInformation } from 'components/AdditionalInformation/AdditionalInformation';
 import { GoBackButton } from 'components/GoBackButton/GoBackButton';
@@ -66,3 +67,8 @@ const MovieDetails = () => {
 };
 
 export default MovieDetails;
+
+MovieDetails.propTypes = {
+  movie: PropTypes.object,
+  backLink: PropTypes.object,
+};

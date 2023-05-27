@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { List } from './FilmGenres.styled';
 
 export const FilmGenres = ({ genres }) => (
@@ -9,3 +10,7 @@ export const FilmGenres = ({ genres }) => (
     ))}
   </List>
 );
+
+FilmGenres.propTypes = {
+  genres: PropTypes.array,
+};

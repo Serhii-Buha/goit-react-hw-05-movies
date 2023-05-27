@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 export const FilmReviews = ({ resultsReviews }) => (
   <ul>
     {resultsReviews.map(({ id, author, content }) => (
@@ -10,3 +12,7 @@ export const FilmReviews = ({ resultsReviews }) => (
     ))}
   </ul>
 );
+
+FilmReviews.propTypes = {
+  resultsReviews: PropTypes.array,
+};

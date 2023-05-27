@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { axiosGetMovieReviews } from 'api/axiosGetMovieReviews';
 import { FilmReviews } from 'components/FilmReviews/FilmReviews';
 import { useEffect, useState } from 'react';
@@ -37,3 +38,7 @@ const Reviews = () => {
 };
 
 export default Reviews;
+
+Reviews.propTypes = {
+  reviews: PropTypes.object,
+};

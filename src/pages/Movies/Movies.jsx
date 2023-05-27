@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import PropTypes from 'prop-types';
 import { useLocation, useSearchParams } from 'react-router-dom';
 import { SearchButton, SearchButtonInput, SearchForm } from './Movies.styled';
 import axiosSearchMovie from 'api/axiosSearchMovie';
@@ -60,3 +61,8 @@ const Movies = () => {
 };
 
 export default Movies;
+
+Movies.propTypes = {
+  movieList: PropTypes.array,
+  searchParams: PropTypes.object,
+};

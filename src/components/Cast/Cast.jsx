@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import axiosGetMovieCast from 'api/axiosGetMovieCast';
 import { FilmCast } from 'components/FilmCast/FilmCast';
 import { useEffect, useState } from 'react';
@@ -29,3 +30,7 @@ const Cast = () => {
 };
 
 export default Cast;
+
+Cast.propTypes = {
+  credits: PropTypes.object,
+};

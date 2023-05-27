@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { List } from 'components/AdditionalInformation/AdditionalInformation.styled';
 import { Link } from 'react-router-dom';
 
@@ -10,3 +11,7 @@ export const FilmsTrendingList = ({ state }) => (
     ))}
   </List>
 );
+
+FilmsTrendingList.propTypes = {
+  state: PropTypes.array,
+};
