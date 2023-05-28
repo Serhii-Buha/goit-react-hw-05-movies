@@ -7,7 +7,7 @@ axios.defaults.baseURL = URL;
 
 const axiosGetMovieDetails = async movieId => {
   try {
-    console.log(movieId);
+    // console.log(movieId);
     const response = await axios.get(
       `3/movie/${movieId}?api_key=${API_KEY}&language=en-US`
     );

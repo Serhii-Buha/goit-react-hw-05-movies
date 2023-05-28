@@ -7,7 +7,7 @@ axios.defaults.baseURL = URL;
 
 const axiosGetMovieCast = async movieId => {
   try {
-    console.log(movieId);
+    // console.log(movieId);
     const response = await axios.get(
       `3/movie/${movieId}/credits?api_key=${API_KEY}&language=en-US`
     );
