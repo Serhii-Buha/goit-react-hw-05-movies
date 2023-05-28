@@ -7,7 +7,7 @@ import { SearchList } from 'components/SearchList/SearchList';
 
 const Movies = () => {
   const location = useLocation();
-  const [movieList, setMovieList] = useState({});
+  const [movieList, setMovieList] = useState([]);
 
   const [searchParams, setSearchParams] = useSearchParams();
 
@@ -16,19 +16,18 @@ const Movies = () => {
   const resultsMovieList = movieList.results;
 
   useEffect(() => {
+    if (searchParams === null || searchParams === '') return;
     if (movieQuery.trim() === '') return;
 
     axiosSearchMovie(movieQuery)
       .then(response => {
         if (response) {
           setMovieList(response);
-        } else {
-          setMovieList({});
         }
       })
 
       .catch(err => console.error(err));
-  }, [movieQuery]);
+  }, [movieQuery, searchParams]);
 
   const handleSubmit = e => {
     e.preventDefault();
