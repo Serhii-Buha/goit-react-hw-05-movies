@@ -16,7 +16,7 @@ const axiosGetMovieCast = async movieId => {
     const data = await response.data;
     return data;
   } catch (error) {
-    console.log(error);
+    console.error(error);
   }
 };
 
