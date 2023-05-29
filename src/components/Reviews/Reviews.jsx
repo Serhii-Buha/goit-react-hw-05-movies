@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { axiosGetMovieReviews } from 'api/axiosGetMovieReviews';
+import axiosGetMovieReviews from 'api/axiosGetMovieReviews';
 import { FilmReviews } from 'components/FilmReviews/FilmReviews';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
